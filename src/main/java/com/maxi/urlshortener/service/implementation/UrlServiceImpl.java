@@ -43,8 +43,9 @@ public class UrlServiceImpl implements IUrlService {
         String code = Base62Encoder.encode(savedUrl.getId());
         // Update the entity with the generated short URL
         savedUrl.setCode(code);
-        String shortUrl = baseUrl + "/" + code;
         urlRepository.save(savedUrl);
+        String shortUrl = baseUrl + "/" + code;
+
         return Optional.of(new ShortenResponseDto(shortUrl));
 
 

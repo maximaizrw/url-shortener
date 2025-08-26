@@ -19,7 +19,7 @@ public class UrlEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    @Column(name = "code", nullable = false, unique = true)
+    @Column(name = "code", unique = true)
     private String code;
     @Column(name = "long_url", nullable = false)
     @NotBlank
